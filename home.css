@@ -1,0 +1,763 @@
+.navbar {
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-brand img {
+    width: 110px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+}
+
+
+.navbar-nav .nav-item .nav-link {
+    color: #183b56;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+   
+    padding: 10px 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover, 
+.navbar-nav .nav-item .nav-link.active {
+    color: #d0b200;
+    border-bottom: 2px solid #d0b200;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.banner-section-container {
+    background-image: url("images/biker bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    position: relative;
+    cursor: default;
+}
+
+.banner-section-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner-section-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.5;
+    z-index: 2;
+    position: relative;
+    cursor: default;
+}
+
+
+
+
+
+.au-section {
+    background-color: #f9fbfe;
+    padding: 20px 0;
+}
+
+.au-section-heading {
+    color: #183b56;
+    font-family: "Roboto", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-top:30px;
+}
+
+.au-section-description {
+    color: #5a7184;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+
+.au-content-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: #545d68;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.au-content-description {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #7b8794;
+    line-height: 1.8;
+}
+
+.au-content-image {
+    max-width: 80%;
+    height: 65vh;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left:50px;
+}
+
+.au-content-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav .nav-item .nav-link {
+        font-size: 14px;
+    }
+
+    .banner-section-title {
+        font-size: 32px;
+    }
+
+    .viewmore-button,
+    .ordernow-button {
+        width: 100px;
+        font-size: 14px;
+    }
+
+    .wcu-content-title {
+        font-size: 24px;
+    }
+
+    .wcu-content-description {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+.wmd-section {
+    background-color: #f9fbfe; 
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.wmd-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #183b56;
+    margin-bottom: 20px;
+}
+
+.wmd-description {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    color: #5a7184;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wmd-feature-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wmd-feature-card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.wmd-feature-icon {
+    font-size: 40px;
+    color: #d0b200;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.wmd-feature-icon:hover {
+    color: #183b56; 
+}
+
+
+.wmd-feature-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #183b56;
+    margin-bottom: 10px;
+}
+
+
+.wmd-feature-description {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #5a7184;
+    flex-grow: 1; 
+}
+
+@media (max-width: 768px) {
+    .wmd-title {
+        font-size: 30px;
+    }
+
+    .wmd-feature-card {
+        padding: 20px;
+    }
+
+    .wmd-feature-title {
+        font-size: 20px;
+    }
+
+    .wmd-feature-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wmd-title {
+        font-size: 24px;
+    }
+
+    .wmd-feature-card {
+        padding: 15px;
+    }
+
+    .wmd-feature-title {
+        font-size: 18px;
+    }
+
+    .wmd-feature-description {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+.Features-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    margin-bottom:25x
+}
+
+.Features-heading {
+    color: #183b56;
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top:25px;
+}
+
+.Features-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Features-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.Features-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+ 
+.Features-card-title {
+    color: #2d3748;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px 10px;
+    text-align: center;
+}
+
+.Features-card-description {
+    color: #4a5568;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 15px 20px;
+}
+
+.Features-card-view-all {
+    color: #d69e2e;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    .Features-image {
+        height: 200px;
+        }
+}
+
+
+
+
+.procedure-section {
+    background-color: #ffffff;
+    padding: 80px;
+    margin-bottom: 10px;
+    padding-top: 50px;
+}
+
+.procedure-section-title {
+    color: #183b56;
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top:10px;
+    margin-bottom: 18px;
+}
+
+.procedure-section-description{
+    color: #5a7184;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.procedure-step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;  
+    transition: transform 0.3s ease-in-out;
+    text-align: left;
+    cursor: default;
+}
+
+.step-icon {
+    font-size: 30px;
+    color: #e74c0f;
+    margin-right: 0px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.procedure-step-content{
+    font-size: 20px;
+    color: #333;
+    margin: 0px; 
+    font-weight: normal;
+    font-family: "Roboto", sans-serif;
+}
+
+
+.procedure-step:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transform: scale(1.1);
+    color: #007BFF;
+}
+
+.procedure-step:hover .step-icon {
+    transform: scale(1.3);
+    color: #007BFF;
+}
+
+.procedure-step-content:hover{
+    color: #007BFF;
+}
+
+.procedure-video {
+    width: 70%;
+    max-width: 400px;  
+    height: 70vh;
+    border-radius: 8px;
+    margin-top:90px;
+}
+
+/* .procedure-video:hover {
+    transform: scale(1.1);
+} */
+
+
+@media (max-width: 768px) {
+    .procedure-step {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .step-icon {
+        margin-bottom: 10px; 
+    }
+
+    .procedure-step h1 {
+        font-size: 18px; 
+    }
+
+    .procedure-video {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+
+
+.calculator-section, .calculator-section1 {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 80px;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-section-image {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
+    border-radius: 8px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.calculator-section-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.calculator-section-title {
+    color: #183b56;
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top:30px;
+    margin-bottom: 18px;
+}
+
+.calculator-section-description {
+    color: #5a7184;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.form-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #183b56;
+}
+
+.form-control {
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.button {
+    height: 45px;
+    width: 120px;
+    color: white;
+    background-color: #d0b200;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #b39d00;
+}
+
+#profitResult h3 {
+    color: #183b56;
+    font-family: "Roboto", sans-serif;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 767px) {
+    .calculator-section-image,
+    .calculator-section1 .calculator-section-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .calculator-section-title {
+        font-size: 24px;
+    }
+
+    .calculator-section-description {
+        font-size: 14px;
+    }
+
+    .button {
+        width: 100%;
+        height: 45px;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .form-label {
+        font-size: 16px;
+    }
+
+    .form-control {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .calculator-section, .calculator-section1 {
+        padding: 20px 15px;
+    }
+
+    .calculator-section-title {
+        font-size: 28px;
+    }
+
+    .calculator-section-description {
+        font-size: 15px;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
+
+#calculatorResults {
+    padding: 20px;
+    background-color: #f9fbfe;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: 0;
+    margin-right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 20px;
+}
+
+.result-item {
+    background-color: #ffffff;
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-family: "Roboto", sans-serif; 
+    font-size: 14px; 
+    color: #333;
+
+}
+
+.result-item h3 {
+    font-size: 16px;
+    font-weight: 600; 
+}
+
+.result-item:nth-child(odd) {
+    background-color: #eaf1f9; 
+
+}
+
+#calculatorResults .result-item {
+    border-left: 5px solid #d0b200; 
+    padding-left: 15px;
+}
+
+@media (max-width: 768px) {
+    #calculatorResults {
+        max-width: 100%; 
+        padding: 15px;
+    }
+
+    .result-item {
+        padding: 15px;
+    }
+}
+.reset-btn {
+    background-color: #e0e0e0; 
+    color: #183b56; 
+    margin-top: 10px; 
+    
+}
+
+.reset-btn:hover {
+    background-color: #b0b0b0;
+}
+
+
+
+
+
+
+
+
+
+
+
+.follow-us-section {
+    background-color: #ffffff; 
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.follow-us-title {
+    text-align: center;
+    color: #183b56;
+    font-family: "Roboto", sans-serif;
+    font-size: 28px; 
+    font-weight: 700;
+    margin-bottom: 15px; 
+}
+
+.follow-us-icon-container {
+    background-color: #e4e1f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.follow-us-icon-container:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.icon {
+    color: #d0b200;
+    font-size: 35px; 
+    transition: color 0.3s ease; 
+}
+
+.icon:hover {
+    color: #183b56; 
+}
+
+
+@media (max-width: 768px) {
+    .follow-us-title {
+        font-size: 28px; 
+    }
+
+    .follow-us-icon-container {
+        width: 70px; 
+        height: 70px;
+        padding: 16px; 
+    }
+
+    .icon {
+        font-size: 30px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .follow-us-title {
+        font-size: 24px; 
+    }
+
+    .follow-us-icon-container {
+        width: 60px;
+        height: 60px;
+        padding: 14px; 
+    }
+
+    .icon {
+        font-size: 26px; 
+    }
+}
+
+
+
+
+.contact-us-section {
+    background-color: #0d2436;
+}
+
+.contact-us-mail-id {
+    color: #959ead;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 14px;
+
+}
+
+.contact-us-discription {
+    color: #959ead;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+}
+
+
+
+
+.final-section-logo{
+    width: 180px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.final-section-logo:hover {
+    transform: scale(1.05);
+    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); */
+    box-shadow: 0 6px 12px rgba(49, 51, 134, 0.15);
+}
