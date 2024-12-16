@@ -37,7 +37,7 @@
 }
 
 .banner-section-container {
-    background-image: url("images/biker bg.jpg");
+    background-image: url("images/biker bg.webp");
     background-size: cover;
     background-position: center;
     height: 98vh;
@@ -136,6 +136,10 @@ html {
         font-size: 14px;
     }
 
+    .au-content-image {
+        margin-left:20px;
+        margin-top:10px
+    }
     .banner-section-title {
         font-size: 32px;
     }
@@ -163,6 +167,7 @@ html {
     background-color: #f9fbfe; 
     padding-top: 50px;
     padding-bottom: 50px;
+
 }
 
 
@@ -281,7 +286,7 @@ html {
 .Features-heading {
     color: #183b56;
     font-family: "Roboto", sans-serif;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 40px;
@@ -345,18 +350,18 @@ html {
 
 .procedure-section {
     background-color: #ffffff;
-    padding: 80px;
     margin-bottom: 10px;
-    padding-top: 50px;
+    padding-top: 10px;
+    padding:80px;
 }
 
 .procedure-section-title {
     color: #183b56;
     font-family: "Roboto", sans-serif;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
     margin-top:10px;
-    margin-bottom: 18px;
+    text-align: center;
 }
 
 .procedure-section-description{
@@ -378,7 +383,6 @@ html {
 .step-icon {
     font-size: 30px;
     color: #e74c0f;
-    margin-right: 0px;
     transition: transform 0.4s ease-in-out;
 }
 
@@ -388,6 +392,25 @@ html {
     margin: 0px; 
     font-weight: normal;
     font-family: "Roboto", sans-serif;
+    padding-left:40px;
+}
+
+.procedure-step-content1{
+    font-size: 20px;
+    color: #333;
+    margin: 0px; 
+    font-weight: normal;
+    font-family: "Roboto", sans-serif;
+    padding-left:50px;
+}
+
+.procedure-step-content2{
+    font-size: 20px;
+    color: #333;
+    margin: 0px; 
+    font-weight: normal;
+    font-family: "Roboto", sans-serif;
+    padding-left:47px;
 }
 
 
@@ -408,11 +431,11 @@ html {
 }
 
 .procedure-video {
-    width: 70%;
+    width: 90%;
     max-width: 400px;  
     height: 70vh;
     border-radius: 8px;
-    margin-top:90px;
+    margin-top:30px;
 }
 
 /* .procedure-video:hover {
@@ -421,6 +444,9 @@ html {
 
 
 @media (max-width: 768px) {
+    .procedure-section {
+        padding:20px;
+    }
     .procedure-step {
         flex-direction: column;
         align-items: center; 
@@ -431,9 +457,20 @@ html {
     }
 
     .procedure-step h1 {
-        font-size: 18px; 
+        font-size: 18px;
+        text-align:center
     }
 
+    .procedure-step-content{
+        padding-left:0px;
+    }
+    .procedure-step-content1{
+        padding-left:0px;
+    }
+
+    .procedure-step-content2{
+        padding-left:0px;
+    }
     .procedure-video {
         max-width: 100%;
         height: auto;
@@ -468,10 +505,11 @@ html {
 .calculator-section-title {
     color: #183b56;
     font-family: "Roboto", sans-serif;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
     margin-top:30px;
     margin-bottom: 18px;
+    text-align:center;
 }
 
 .calculator-section-description {
@@ -479,6 +517,7 @@ html {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     margin-bottom: 25px;
+    text-align:center;
 }
 
 .form-label {
@@ -688,6 +727,11 @@ html {
     transition: color 0.3s ease; 
 }
 
+.icon1 {
+    color: #d0b200;
+    font-size: 30px; 
+    transition: color 0.3s ease; 
+}
 .icon:hover {
     color: #183b56; 
 }
@@ -744,7 +788,7 @@ html {
 .contact-us-discription {
     color: #959ead;
     font-family: "Roboto", sans-serif;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 
