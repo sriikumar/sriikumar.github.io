@@ -220,41 +220,42 @@
         </div>
 
         <div class="procedure-section pt-5 pb-5" id="procedureSection">
+            <h1 class="procedure-section-title">Procedure</h1>
             <div class="containerCarousel">
                 <div class="row align-items-center">
+                    
                     <div class="col-12 col-md-6 order-md-1">
-
-                        <h1 class="procedure-section-title">Procedure</h1>
+                       
                         <p class="procedure-section-description">The helmet cleaning procedure ensures your helmet is sanitized and ready for use, providing a clean and safe experience for your ride. The detailed steps are listed below.</p>
         
                         <div class="procedure-step">
                             <i class="fas fa-qrcode step-icon"></i>
-                            <h1 class="procedure-step-content">&nbsp;&nbsp; &emsp;Scan the QR</h1>
+                            <h1 class="procedure-step-content1">Scan the QR</h1>
                         </div>
                     
                         <div class="procedure-step">
                             <i class="fas fa-door-open step-icon"></i>
-                            <h1 class="procedure-step-content">&emsp; Unlock the door</h1>
+                            <h1 class="procedure-step-content">  Unlock the door</h1>
                         </div>
                         <div class="procedure-step">
                             <i class="fas fa-helmet-safety step-icon"></i>
-                            <h1 class="procedure-step-content"> &emsp; Place your helmet in cabin</h1>
+                            <h1 class="procedure-step-content">  Place your helmet in cabin</h1>
                         </div>
                         <div class="procedure-step">
                             <i class="fas fa-lock step-icon"></i>
-                            <h1 class="procedure-step-content"> &nbsp; &emsp; Lock the door</h1>
+                            <h1 class="procedure-step-content2"> Lock the door</h1>
                         </div>
                         <div class="procedure-step">
                             <i class="fas fa-biohazard step-icon"></i>
-                            <h1 class="procedure-step-content">&emsp; Disinfection and sterilization starts</h1>
+                            <h1 class="procedure-step-content"> Disinfection and sterilization starts</h1>
                         </div>
                         <div class="procedure-step">
-                            <i class="fas fa-unlock step-icon"></i>
-                            <h1 class="procedure-step-content">&emsp; &nbsp; Unlock the door</h1>
+                            <i class="fas fa-unlock step-icon "></i>
+                            <h1 class="procedure-step-content1"> Unlock the door</h1>
                         </div>
                         <div class="procedure-step">
-                            <i class="fas fa-smile-beam step-icon"></i>
-                            <h1 class="procedure-step-content">&nbsp; &nbsp; &nbsp; Your fresh helmet is ready for a comfortable ride</h1>
+                            <i class="fas fa-smile-beam step-icon "></i>
+                            <h1 class="procedure-step-content2">  Your fresh helmet is ready for a comfortable ride</h1>
                         </div>
                     </div>
         
@@ -273,14 +274,20 @@
         
         
         <div class="calculator-section pt-5 pb-5" id="calculatorSection">
+            <h1 class="calculator-section-title">Profit Calculator</h1>
+            <p class="calculator-section-description">Calculate your returns by maintaining the machines effectively. Enter the details below to see your profit.</p>
+                          
             <div class="containerCarousel">
                 <div class="row align-items-center">
 
                     <div class="col-12 col-md-6 order-md-2">
-                        <h1 class="calculator-section-title">Profit Calculator</h1>
-                        <p class="calculator-section-description">Calculate your returns by maintaining the machines effectively. Enter the details below to see your profit.</p>
-                            
+                       
+                          
                         <form onsubmit="calculateProfit(event)">
+                            <div class="mb-3">
+                                <label for="installedMachines" class="form-label">Cost of Machine</label>
+                                <input type="number" class="form-control" id="MachineCost" placeholder="Enter each machine cost" required />
+                            </div>
                             <div class="mb-3">
                                 <label for="installedMachines" class="form-label">Number of Machines Installed</label>
                                 <input type="number" class="form-control" id="installedMachines" placeholder="Enter number of machines" required />
@@ -312,7 +319,7 @@
                             const cleaningCost = document.getElementById('cleaningCost').value;
                             const cleansperday = document.getElementById('cleansperday').value;
                         
-                            const machineCost = 250000;
+                            const machineCost =  document.getElementById('MachineCost').value;
                             const dailyrevenue = machines * cleaningCost * cleansperday;
                             const monthlyrevenue = dailyrevenue * 30;
                             const yearlyrevenue = dailyrevenue * 365;
@@ -346,6 +353,7 @@
                             document.getElementById('installedMachines').value = '';
                             document.getElementById('cleaningCost').value = '';
                             document.getElementById('cleansperday').value = '';
+                            document.getElementById('MachineCost').value = '';
                             
                         
                             document.getElementById('calculatorResults').style.display = 'none';
@@ -368,7 +376,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="follow-us-title">Follow us</h1>
+                        <h1 class="follow-us-title">Contact / Follow us</h1>
                     </div>
                     <div class="col-12">
                         <div class="d-flex flex-row justify-content-center">
@@ -384,6 +392,19 @@
                                     <i class="fa fa-whatsapp icon" aria-hidden="true"></i>
                                 </a>
                             </div>
+
+
+                            <div class="follow-us-icon-container">
+                                <a href="mailto:hello@freshpod.in" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-regular fa-envelope icon" aria-hidden="true"></i>
+                                </a>      
+                            </div>
+
+                            <div class="follow-us-icon-container">
+                                <a href="tel:+91-7815908571" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-solid fa-phone icon1" aria-hidden="true"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -395,7 +416,7 @@
                 <div class="row">
                     <div class="col-12 text-center">
                         <img src="images/logo no bg.png" class="final-section-logo" />
-                        <h1 class="contact-us-mail-id">Freshpod@india.com</h1>
+                        <h1 class="contact-us-mail-id">Hello@freshpod.in</h1>
                         <p class="contact-us-discription">Hyderabad,India</p>
                     </div>
                 </div>
