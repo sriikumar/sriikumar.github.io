@@ -770,8 +770,6 @@ html {
 }
 
 
-
-
 .contact-us-section {
     background-color: #0d2436;
 }
@@ -791,9 +789,6 @@ html {
     font-size: 13px;
 }
 
-
-
-
 .final-section-logo{
     width: 180px;
     height: auto;
@@ -809,5 +804,5 @@ html {
 .make-in-india{
     font-family: "lucida Bright";
     font-size: 13px;
-    color: #ffffff;
+    color: white;
 }
