@@ -805,3 +805,7 @@ html {
     /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); */
     box-shadow: 0 6px 12px rgba(49, 51, 134, 0.15);
 }
+
+.make-in-india{
+    font-family: "lucida Bright";
+    font-size: 13px;
