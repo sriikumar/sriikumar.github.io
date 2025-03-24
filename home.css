@@ -1,45 +1,102 @@
+/* Navbar Styling */
 .navbar {
     background-color: #ffffff !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px 15px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 12px 20px;
+    transition: all 0.3s ease-in-out;
 }
 
+/* Logo Styling */
 .navbar-brand img {
-    width: 110px;
+    width: 130px;
     height: auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out,filter 0.3s ease-in-out;
 }
 
 .navbar-brand img:hover {
     transform: scale(1.1);
 }
 
-
+/* Navbar Links */
 .navbar-nav .nav-item .nav-link {
     color: #183b56;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 16px;
-   
-    padding: 10px 10px;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding: 10px 12px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
 }
 
+/* Hover Effects */
 .navbar-nav .nav-item .nav-link:hover, 
 .navbar-nav .nav-item .nav-link.active {
     color: #d0b200;
-    border-bottom: 2px solid #d0b200;
 }
 
+.navbar-nav .nav-item .nav-link::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #d0b200;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+    width: 70%;
+}
+
+/* Navbar Toggler */
 .navbar-toggler {
     border: none;
+    outline: none;
+    padding: 6px;
 }
 
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(0, 0, 0, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+        background: #ffffff;
+        padding: 15px;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 8px;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        font-size: 18px;
+        display: inline-block;
+    }
+
+    .navbar-nav .nav-item .nav-link::after {
+        bottom: 2px;
+    }
+}
+
+
+
+/* Banner Section */
 .banner-section-container {
-    background-image: url("images/biker bg.webp");
-    background-size: cover;
-    background-position: center;
+    background: url("images/biker bg.webp") no-repeat center center/cover;
     height: 98vh;
     display: flex;
     justify-content: center;
@@ -48,9 +105,11 @@
     color: white;
     padding: 20px;
     position: relative;
-    cursor: default;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
 }
 
+/* Background Overlay */
 .banner-section-container::after {
     content: '';
     position: absolute;
@@ -58,68 +117,122 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6); /* Increased contrast for better readability */
     z-index: 1;
+    transition: all 0.4s ease-in-out;
 }
 
+/* Text Styling */
 .banner-section-title {
-    font-family: "Roboto", sans-serif;
-    font-size: 48px;
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
     font-weight: 700;
-    line-height: 1.5;
+    line-height: 1.4;
     z-index: 2;
     position: relative;
     cursor: default;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Smooth Text Appearance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background Zoom Effect */
+.banner-section-container:hover {
+    background-size: 105%;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .banner-section-title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-section-title {
+        font-size: 28px;
+        line-height: 1.3;
+    }
 }
 
 
-
-
-
+/* About Section */
 .au-section {
     background-color: #f9fbfe;
-    padding: 20px 0;
+    padding: 60px 0;
+    text-align: center;
+    overflow: hidden;
 }
 
+/* Heading Style */
 .au-section-heading {
     color: #183b56;
-    font-family: "Roboto", sans-serif;
-    font-size: 36px;
+    font-family: "Poppins", sans-serif;
+    font-size: 38px;
     font-weight: 700;
-    margin-bottom: 0px;
-    margin-top:30px;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
 }
 
+.au-section-heading::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #d69e2e;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Section Description */
 .au-section-description {
     color: #5a7184;
     font-family: "Roboto", sans-serif;
     font-size: 18px;
-    margin-bottom: 15px;
     line-height: 1.8;
 }
 
-
+/* Content Title */
 .au-content-title {
-    font-family: "Roboto", sans-serif;
-    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
     color: #545d68;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 15px;
 }
 
+/* Content Description */
 .au-content-description {
     font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    color: #7b8794;
+    font-size: 17px;
+    color: #5a7184;
     line-height: 1.8;
+    text-align: justify;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
 }
 
+/* Image Styling */
 .au-content-image {
-    max-width: 120%;
-    height: 65vh;
+    width: 55%;
+    height: 450px;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-left:50px;
+    margin-top: 20px;
 }
 
 .au-content-image:hover {
@@ -127,39 +240,94 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-html {
-    scroll-behavior: smooth;
+/* Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* Responsive Styling */
 @media (max-width: 768px) {
-    .navbar-nav .nav-item .nav-link {
-        font-size: 14px;
-    }
-
-    .au-content-image {
-        margin-left:20px;
-        margin-top:10px
-    }
-    .banner-section-title {
+    .au-section-heading {
         font-size: 32px;
     }
 
-    .viewmore-button,
-    .ordernow-button {
-        width: 100px;
-        font-size: 14px;
+    .au-content-title {
+        font-size: 20px;
     }
 
-    .wcu-content-title {
-        font-size: 24px;
+    .au-content-description {
+        font-size: 16px;
     }
 
-    .wcu-content-description {
-        font-size: 14px;
+    .au-content-image {
+        margin-top: 15px;
     }
 }
 
 
+.make-in-india-section {
+    background-color: #f9fbfe;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.make-in-india-heading {
+    font-family: "Roboto", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #183b56;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.make-in-india-heading::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #d69e2e;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.make-in-india-image {
+    max-width: 35%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px auto;
+    display: block;
+}
+
+.make-in-india-description {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    color: #5a7184;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .make-in-india-heading {
+        font-size: 30px;
+    }
+
+    .make-in-india-description {
+        font-size: 16px;
+    }
+
+    .make-in-india-image {
+        max-width: 70%;
+    }
+}
 
 
 
@@ -170,13 +338,22 @@ html {
 
 }
 
-
 .wmd-title {
     font-family: "Roboto", sans-serif;
     font-size: 36px;
     font-weight: 700;
     color: #183b56;
     margin-bottom: 20px;
+}
+
+.wmd-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #d69e2e;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 .wmd-description {
@@ -293,6 +470,16 @@ html {
     margin-top:25px;
 }
 
+.Features-heading::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #d69e2e;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
 .Features-card {
     border-radius: 16px;
     overflow: hidden;
@@ -362,6 +549,16 @@ html {
     font-weight: 700;
     margin-top:10px;
     text-align: center;
+}
+
+.procedure-section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #d69e2e;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 .procedure-section-description{
@@ -510,6 +707,16 @@ html {
     margin-top:30px;
     margin-bottom: 18px;
     text-align:center;
+}
+
+.calculator-section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #d69e2e;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 .calculator-section-description {
@@ -678,15 +885,6 @@ html {
 }
 
 
-
-
-
-
-
-
-
-
-
 .follow-us-section {
     background-color: #ffffff; 
     padding-top: 30px;
@@ -700,6 +898,16 @@ html {
     font-size: 28px; 
     font-weight: 700;
     margin-bottom: 15px; 
+}
+
+.follow-us-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #d69e2e;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 .follow-us-icon-container {
@@ -732,10 +940,10 @@ html {
     font-size: 30px; 
     transition: color 0.3s ease; 
 }
+
 .icon:hover {
     color: #183b56; 
 }
-
 
 @media (max-width: 768px) {
     .follow-us-title {
@@ -770,26 +978,40 @@ html {
 }
 
 
+/* General Styling */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contact Us Section */
 .contact-us-section {
     background-color: #0d2436;
+    padding: 30px 0;
+    text-align: center;
 }
 
-.contact-us-mail-id {
+.contact-us-mail-id a {
     color: #959ead;
-    font-family: "Roboto", sans-serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
     margin-top: 14px;
-
 }
 
-.contact-us-discription {
+.contact-us-mail-id a:hover {
+    color: #ffffff;
+}
+
+.contact-us-description {
     color: #959ead;
-    font-family: "Roboto", sans-serif;
     font-size: 13px;
 }
 
-.final-section-logo{
+/* Logo Styling */
+.final-section-logo {
     width: 180px;
     height: auto;
     transition: transform 0.3s ease;
@@ -797,12 +1019,5 @@ html {
 
 .final-section-logo:hover {
     transform: scale(1.05);
-    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); */
     box-shadow: 0 6px 12px rgba(49, 51, 134, 0.15);
-}
-
-.make-in-india{
-    color:#959ead;
-    font-family: "lucida Bright";
-    font-size: 13px;
 }
